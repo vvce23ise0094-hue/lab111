@@ -1,0 +1,41 @@
+java -version
+ls
+
+sudo rm jenkins.war
+sudo rm -rf ~/.jenkins
+
+| Command                                                     | Purpose / Description                                                             |
+| ----------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `sudo apt update`                                           | Updates the Ubuntu package list to get the latest available software versions.    |
+| `java --version`                                            | Checks the installed Java version on the system.                                  |
+| `sudo apt install openjdk-22-jdk`                           | Attempts to install OpenJDK 22 development kit (not available in the repository). |
+| `sudo apt install openjdk-21-jdk`  
+| Installs OpenJDK 21 (required to run Jenkins).                                    |
+| `wget https://get.jenkins.io/war-stable/latest/jenkins.war` | Downloads the latest stable Jenkins `.war` file from the Jenkins server.          |
+| `wget https://get.jenkins.io/war-stable/latest/jenkins.war` | Re-downloads the Jenkins `.war` file again.                                       |
+| `java -jar jenkins.war --httpPort=8080`    http:/localhost:8087 
+| Starts the Jenkins server using the downloaded `.war` file on port **8080**.      |
+| `cd ~/.jenkins`                                             | Navigates to the Jenkins home directory where configuration files are stored.     |
+| `rm -rf users`                                              | Deletes the Jenkins user accounts directory to reset login credentials.           |
+| `ls`                                                        | Lists all files and folders inside the current directory.                         |
+| `cd ..`                                                     | Moves back to the previous (parent) directory.                                    |
+| `java -jar jenkins.war httpPort=8080`                       | Starts Jenkins again after deleting the user configuration.                       |
+| `cd ~/.jenkins`                                             | Opens the Jenkins home folder again.                                              |
+| `ls`                                                        | Displays files in the `.jenkins` directory.                                       |
+| `java -jar jenkins.war httpPort=8084`                       | Attempts to run Jenkins on port **8084**.                                         |
+| `wget https://get.jenkins.io/war-stable/latest/jenkins.war` | Downloads the Jenkins `.war` file again into the current directory.               |
+| `java -jar jenkins.war httpPort=8080`                       | Starts Jenkins again on port **8080**.                                            |
+| `cd`                                                        | Moves to the user's home directory.                                               |
+| `cd ~/.jenkins`                                             | Opens the Jenkins configuration folder.                                           |
+| `ls`                                                        | Shows files present in the Jenkins home directory.                                |
+| `rm config.xml`                                             | Deletes the Jenkins main configuration file to reset Jenkins settings.            |
+| `cd ..`                                                     | Returns to the parent directory.                                                  |
+| `java -jar jenkins.war --httpPort=8080`                     | Starts Jenkins again on port **8080** after resetting configuration.              |
+
+sudo apt update
+sudo apt install snapd -y
+sudo snap install ngrok
+ngrok version
+ngrok link
+ngrok http 8087
+
