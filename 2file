@@ -1,0 +1,25 @@
+git --version
+
+git config --global user.name "medha7299"
+git config --global user.email "medhagaonkar5@gmail.com"
+
+git config --list
+
+mkdir local1
+cd local1
+
+git clone https://github.com/medha7299/git-lab-experiment.git
+cd git-lab-experiment/
+
+nano project.txt
+git add project.txt
+git commit -m "initial commit"
+git push origin master
+
+git branch feature-branch
+git checkout feature-branch
+
+nano project.txt
+git add project.txt
+git commit -m "Feature branch update"
+git push origin feature-branch
