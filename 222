@@ -1,0 +1,27 @@
+mkdir git-merge1
+cd git-merge1
+git init
+echo "initial line of content" > merge.txt
+git add .
+git commit -m "add initial content"
+git checkout -b branch-a
+echo "Content from branch A" > merge.txt
+git commit -am "Modified content from branch A"
+
+git checkout master
+git checkout -b branch-b
+echo "Content from branch B" > merge.txt
+git commit -am "Modified content from branch B"
+
+git checkout master
+git merge branch-b
+
+git merge branch-a
+
+cat merge.txt
+
+echo "Combined content from A and B" > merge.txt
+cat merge.txt
+
+git add merge.txt
+git commit -m "Resolved merge conflict by combining content"
