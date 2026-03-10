@@ -1,0 +1,23 @@
+git --version
+git config --global user.name "vvce23ise0094-hue"
+git config --global user.email "vvce23ise0094@vvce.ac.in"
+git config --list
+mkdir localrepo
+cd localrepo
+git init
+ls -a
+touch "hi" >file.txt
+ls
+touch hii > file.txt
+cat file.txt
+git add .
+git status
+git commit -m "initial commit"
+git log
+git branch
+git remote add origin https://github.com/vvce23ise0094-hue/lab111.git
+git branch -M master
+git push --set-upstream origin master
+git push -u origin master
+git clone https://github.com/vvce23ise0094-hue/lab111.git
+git reset --hard 
